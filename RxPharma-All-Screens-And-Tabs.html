@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RxPharma ? Complete Screen &amp; Tab Visual Reference (76 Captures)</title>
+<style>
+  :root {
+    --bg: #f4f1ea; --surface: #ffffff; --line: #e2ddd2; --ink: #1f1d18; --ink2: #5c574f; --ink3: #8c867a;
+    --brand: #1b5e49; --brand2: #134636;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.5; }
+  .wrap { max-width: 1360px; margin: 0 auto; padding: 36px 28px 80px; }
+  header.top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 2px solid var(--line); }
+  h1 { margin: 0; font-size: 28px; color: var(--brand2); }
+  .sub { color: var(--ink2); font-size: 15px; margin-top: 4px; }
+  .meta { color: var(--ink2); font-size: 13px; text-align: right; background: var(--surface); padding: 10px 16px; border-radius: 10px; border: 1px solid var(--line); }
+  .toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 10px; }
+  .toc a { font-size: 13px; font-weight: 600; color: var(--brand2); text-decoration: none; border: 1px solid var(--line); background: var(--surface); padding: 6px 12px; border-radius: 999px; }
+  .toc a:hover { background: var(--brand); color: #fff; border-color: var(--brand); }
+  section { margin-top: 42px; }
+  .sechead { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 0 0 18px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+  .sechead h2 { margin: 0; font-size: 20px; color: var(--ink); }
+  .sechead code { font-size: 13px; background: #e8e3d8; padding: 3px 8px; border-radius: 6px; color: var(--brand2); }
+  .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  @media (max-width: 960px) { .grid { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; box-shadow: 0 2px 6px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+  .shot { display: block; width: 100%; height: auto; border-bottom: 1px solid var(--line); cursor: zoom-in; }
+  .cap { padding: 14px 16px; display: flex; gap: 12px; align-items: flex-start; }
+  .num { flex: 0 0 auto; min-width: 30px; height: 30px; border-radius: 8px; background: var(--brand); color: #fff; font-weight: 700; font-size: 13px; display: grid; place-items: center; }
+  .captext b { display: block; font-size: 15px; color: var(--ink); }
+  .captext small.file { display: inline-block; font-family: monospace; font-size: 12px; color: var(--brand); margin: 2px 0 4px; }
+  .captext p { margin: 0; font-size: 13px; color: var(--ink2); }
+  .lb { position: fixed; inset: 0; background: rgba(18, 16, 12, 0.88); display: none; place-items: center; padding: 24px; z-index: 100; cursor: zoom-out; }
+  .lb.on { display: grid; }
+  .lb img { max-width: 96vw; max-height: 94vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>RxPharma ? Complete Screen &amp; Tab Visual Reference</h1>
+      <div class="sub">Every screen, tab, filter chip, drawer, and modal captured live from the running application (FastAPI + SQLite + React).</div>
+    </div>
+    <div class="meta">
+      <b>16 Screens ? All Tabs &amp; Drawers ? 76 Captures</b><br/>
+      Resolution: 1440 &times; 900 (plus 820 &times; 650 compact tabs)<br/>
+      Click any screenshot to inspect full-size
+    </div>
+  </header>
+  <nav class="toc">
+    <a href="#dashboard">1. Dashboard (Today at a Glance)</a>
+    <a href="#sales-counter">2. Sales Counter (Billing, Availability Check, Batches & Tabs)</a>
+    <a href="#bills">3. Saved Bills & Print Preview</a>
+    <a href="#open-close">4. Open / Close Shop & Daily Action Summary</a>
+    <a href="#receiving">5. Receiving Goods & Physical Purchase Invoices</a>
+    <a href="#buying">6. Buying, Distributor Comparison & Minimum-Order Review (All Tabs & Filters)</a>
+    <a href="#distributors">7. Distributors, Supplier Accounts, Credit Notes & Reconciliation (All Tabs)</a>
+    <a href="#returns">8. Near-Expiry Stock & Supplier Returns (All 4 Tabs)</a>
+    <a href="#stock-trail">9. Stock Trail & Audit Evidence (All 7 Tabs + Drawer)</a>
+    <a href="#compliance">10. Compliance, Batch Recalls & Inspector Produce (Overview + 5 Artifacts)</a>
+    <a href="#customers">11. Customers & Repeat-Order Previews (All 4 Tabs + Drawer)</a>
+    <a href="#doctors">12. Doctors Directory</a>
+    <a href="#udhaar">13. Udhaar (Customer Credit & Private Reminders)</a>
+    <a href="#deliveries">14. Home Deliveries</a>
+    <a href="#reports">15. Reports, GST & CA Export (All 8 Tabs)</a>
+    <a href="#settings">16. Settings (All 3 Tabs: Pharmacy, Bill Printing, Phones)</a>
+  </nav>
+  
+  <section id="dashboard">
+    <div class="sechead">
+      <h2>1. Dashboard (Today at a Glance)</h2>
+      <code>#/dashboard ? 2 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/01-Dashboard-Overview.png" alt="Dashboard ? Today at a Glance" />
+        <div class="cap">
+          <span class="num">01</span>
+          <div class="captext">
+            <b>Dashboard ? Today at a Glance</b>
+            <small class="file">01-Dashboard-Overview.png</small>
+            <p>Main landing screen: Today's sales, Udhaar to collect, Pay to distributors, Items to order, Home deliveries today, and Orders coming in.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/02-Dashboard-Attention-Notifications-Popover.png" alt="Dashboard ? Attention & Notifications Popover" />
+        <div class="cap">
+          <span class="num">02</span>
+          <div class="captext">
+            <b>Dashboard ? Attention & Notifications Popover</b>
+            <small class="file">02-Dashboard-Attention-Notifications-Popover.png</small>
+            <p>Top-bar standing-awareness popover showing cold-chain status, low stock, and pending operational alerts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sales-counter">
+    <div class="sechead">
+      <h2>2. Sales Counter (Billing, Availability Check, Batches & Tabs)</h2>
+      <code>#/billing ? 8 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/03-Sales-Counter-Main-Billing.png" alt="Sales Counter ? Main Billing Workspace" />
+        <div class="cap">
+          <span class="num">03</span>
+          <div class="captext">
+            <b>Sales Counter ? Main Billing Workspace</b>
+            <small class="file">03-Sales-Counter-Main-Billing.png</small>
+            <p>10 counter slots, spoken/typed request bar, inline batch selector, strip/tab unit toggle, medicine & bill discounts, and side-by-side Medicine & Totals panels.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/04-Sales-Counter-Medicine-Search-And-Substitutes.png" alt="Sales Counter ? Medicine Search & Same-Salt Substitutes" />
+        <div class="cap">
+          <span class="num">04</span>
+          <div class="captext">
+            <b>Sales Counter ? Medicine Search & Same-Salt Substitutes</b>
+            <small class="file">04-Sales-Counter-Medicine-Search-And-Substitutes.png</small>
+            <p>Instant search dropdown showing On Your Rack Now, Same Salt Other Brand, and Not On Your Rack (+ Add to buy list).</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/05-Sales-Counter-Availability-Check-Card.png" alt="Sales Counter ? Medicine Availability Check ('Check Dolo 650')" />
+        <div class="cap">
+          <span class="num">05</span>
+          <div class="captext">
+            <b>Sales Counter ? Medicine Availability Check ('Check Dolo 650')</b>
+            <small class="file">05-Sales-Counter-Availability-Check-Card.png</small>
+            <p>Shows usable stock, customer reservations, incoming POs, open requests, recorded batches, and one-click '+ Add 1 strip to bill' or '+ Create pending customer request'.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/06-Sales-Counter-Batch-Picker-Panel.png" alt="Sales Counter ? Batch Options Picker ('Show the batch options')" />
+        <div class="cap">
+          <span class="num">06</span>
+          <div class="captext">
+            <b>Sales Counter ? Batch Options Picker ('Show the batch options')</b>
+            <small class="file">06-Sales-Counter-Batch-Picker-Panel.png</small>
+            <p>Explicit physical batch verification and selection panel, including batches with customer reservations or zero recorded stock.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/07-Sales-Counter-Bill-Options-Menu.png" alt="Sales Counter ? Bill Options Menu" />
+        <div class="cap">
+          <span class="num">07</span>
+          <div class="captext">
+            <b>Sales Counter ? Bill Options Menu</b>
+            <small class="file">07-Sales-Counter-Bill-Options-Menu.png</small>
+            <p>Dropdown menu for Save bill only, Plain Paper print, Customer details, and Saved bills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/08-Sales-Counter-Customer-Details-Modal.png" alt="Sales Counter ? Customer & Prescriber Details Modal" />
+        <div class="cap">
+          <span class="num">08</span>
+          <div class="captext">
+            <b>Sales Counter ? Customer & Prescriber Details Modal</b>
+            <small class="file">08-Sales-Counter-Customer-Details-Modal.png</small>
+            <p>Attach customer name, address, and prescribing doctor to the active counter bill.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/09-Sales-Counter-Compact-Totals-Tab.png" alt="Sales Counter ? Totals Tab (Compact View)" />
+        <div class="cap">
+          <span class="num">09</span>
+          <div class="captext">
+            <b>Sales Counter ? Totals Tab (Compact View)</b>
+            <small class="file">09-Sales-Counter-Compact-Totals-Tab.png</small>
+            <p>Counter detail panel switched to the Totals tab (MRP total, Discount, Adjust amount, Paid / Udhaar, To pay).</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/10-Sales-Counter-Compact-Product-Tab.png" alt="Sales Counter ? Product Tab (Compact View)" />
+        <div class="cap">
+          <span class="num">10</span>
+          <div class="captext">
+            <b>Sales Counter ? Product Tab (Compact View)</b>
+            <small class="file">10-Sales-Counter-Compact-Product-Tab.png</small>
+            <p>Counter detail panel switched to the Product tab (Total stock, Shelf, Buy price, Pack, Schedule, Cost with GST).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="bills">
+    <div class="sechead">
+      <h2>3. Saved Bills & Print Preview</h2>
+      <code>#/bills ? 2 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/11-Bills-Saved-Bills-List.png" alt="Bills ? Saved Bills Search & History" />
+        <div class="cap">
+          <span class="num">11</span>
+          <div class="captext">
+            <b>Bills ? Saved Bills Search & History</b>
+            <small class="file">11-Bills-Saved-Bills-List.png</small>
+            <p>Search saved bills by bill number, customer name, and date range (From / To).</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/12-Bill-Print-Preview-Dialog.png" alt="Bills ? Bill Print Preview Dialog" />
+        <div class="cap">
+          <span class="num">12</span>
+          <div class="captext">
+            <b>Bills ? Bill Print Preview Dialog</b>
+            <small class="file">12-Bill-Print-Preview-Dialog.png</small>
+            <p>Exact stationery / A4 print preview dialog with printer selection and one-click reprint.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="open-close">
+    <div class="sechead">
+      <h2>4. Open / Close Shop & Daily Action Summary</h2>
+      <code>#/day ? 1 capture</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/13-Open-Close-Day-And-Action-Summary.png" alt="Open / Close ? Cold Chain, Cash Drawer & Daily Action Summary" />
+        <div class="cap">
+          <span class="num">13</span>
+          <div class="captext">
+            <b>Open / Close ? Cold Chain, Cash Drawer & Daily Action Summary</b>
+            <small class="file">13-Open-Close-Day-And-Action-Summary.png</small>
+            <p>Cold-chain status, near-expiry stock, opening float, cash takings, today's sales by payment method (Paid vs Udhaar), and prioritised 'What needs your attention today' / 'Closing summary' action cards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="receiving">
+    <div class="sechead">
+      <h2>5. Receiving Goods & Physical Purchase Invoices</h2>
+      <code>#/receiving ? 4 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/14-Receiving-Email-And-WhatsApp-Queue.png" alt="Receiving ? Bills Being Checked & Email/WhatsApp Queue" />
+        <div class="cap">
+          <span class="num">14</span>
+          <div class="captext">
+            <b>Receiving ? Bills Being Checked & Email/WhatsApp Queue</b>
+            <small class="file">14-Receiving-Email-And-WhatsApp-Queue.png</small>
+            <p>Open receipts in progress ('Bills being checked') and incoming distributor bills fetched from Email & WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/15-Receiving-Manage-Senders-Panel.png" alt="Receiving ? Manage Approved Distributor Senders" />
+        <div class="cap">
+          <span class="num">15</span>
+          <div class="captext">
+            <b>Receiving ? Manage Approved Distributor Senders</b>
+            <small class="file">15-Receiving-Manage-Senders-Panel.png</small>
+            <p>Whitelist of distributor bill email addresses allowed into the receiving queue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/16-Receiving-Enter-Paper-Bill-Drawer.png" alt="Receiving ? Enter Physical Paper Bill & PO Prefill Drawer" />
+        <div class="cap">
+          <span class="num">16</span>
+          <div class="captext">
+            <b>Receiving ? Enter Physical Paper Bill & PO Prefill Drawer</b>
+            <small class="file">16-Receiving-Enter-Paper-Bill-Drawer.png</small>
+            <p>Receive goods against a physical paper invoice or prefill lines directly from an awaiting Purchase Order.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/17-Receiving-Bill-Check-Goods-Verification-Drawer.png" alt="Receiving ? Check the Goods Against the Bill (BillCheck Drawer)" />
+        <div class="cap">
+          <span class="num">17</span>
+          <div class="captext">
+            <b>Receiving ? Check the Goods Against the Bill (BillCheck Drawer)</b>
+            <small class="file">17-Receiving-Bill-Check-Goods-Verification-Drawer.png</small>
+            <p>Line-by-line batch/expiry/Rate/MRP/quantity verification, multi-batch splitting, spoken/quick discrepancy command bar, bill amendments, and credit note expectations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="buying">
+    <div class="sechead">
+      <h2>6. Buying, Distributor Comparison & Minimum-Order Review (All Tabs & Filters)</h2>
+      <code>#/buying ? 9 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/18-Buying-To-Buy-Tab-All.png" alt="Buying ? 'To buy' Tab (All Recommendations & Arrived Orders)" />
+        <div class="cap">
+          <span class="num">18</span>
+          <div class="captext">
+            <b>Buying ? 'To buy' Tab (All Recommendations & Arrived Orders)</b>
+            <small class="file">18-Buying-To-Buy-Tab-All.png</small>
+            <p>Ranked purchase recommendations (Customer orders, Catch, Fast Selling, Low Stock), 'Arrived for customers' pickup bar with 'Bill at Counter', and distributor draft baskets.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/19-Buying-Add-Customer-Order-Form.png" alt="Buying ? '+ Customer order' Quick Entry Form" />
+        <div class="cap">
+          <span class="num">19</span>
+          <div class="captext">
+            <b>Buying ? '+ Customer order' Quick Entry Form</b>
+            <small class="file">19-Buying-Add-Customer-Order-Form.png</small>
+            <p>Record a new customer medicine request with customer name, quantity, and needed-by date.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/20-Buying-To-Buy-Filter-Customer-Tab.png" alt="Buying ? 'To buy' Tab ? 'Customer' Filter" />
+        <div class="cap">
+          <span class="num">20</span>
+          <div class="captext">
+            <b>Buying ? 'To buy' Tab ? 'Customer' Filter</b>
+            <small class="file">20-Buying-To-Buy-Filter-Customer-Tab.png</small>
+            <p>Filtered view showing only medicines requested by waiting customers.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/21-Buying-To-Buy-Filter-Catch-Tab.png" alt="Buying ? 'To buy' Tab ? 'Catch' Filter" />
+        <div class="cap">
+          <span class="num">21</span>
+          <div class="captext">
+            <b>Buying ? 'To buy' Tab ? 'Catch' Filter</b>
+            <small class="file">21-Buying-To-Buy-Filter-Catch-Tab.png</small>
+            <p>Filtered view showing counter catch / shortbook items noted during the day.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/22-Buying-To-Buy-Filter-Fast-Selling-Tab.png" alt="Buying ? 'To buy' Tab ? 'Fast Selling' Filter" />
+        <div class="cap">
+          <span class="num">22</span>
+          <div class="captext">
+            <b>Buying ? 'To buy' Tab ? 'Fast Selling' Filter</b>
+            <small class="file">22-Buying-To-Buy-Filter-Fast-Selling-Tab.png</small>
+            <p>Filtered view showing high-velocity medicines needing replenishment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/23-Buying-To-Buy-Filter-Low-Stock-Tab.png" alt="Buying ? 'To buy' Tab ? 'Low Stock' Filter" />
+        <div class="cap">
+          <span class="num">23</span>
+          <div class="captext">
+            <b>Buying ? 'To buy' Tab ? 'Low Stock' Filter</b>
+            <small class="file">23-Buying-To-Buy-Filter-Low-Stock-Tab.png</small>
+            <p>Filtered view showing out-of-stock and running-low medicines.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/24-Buying-Distributor-And-Scheme-Compare-Modal.png" alt="Buying ? Distributor & Scheme Comparison Modal" />
+        <div class="cap">
+          <span class="num">24</span>
+          <div class="captext">
+            <b>Buying ? Distributor & Scheme Comparison Modal</b>
+            <small class="file">24-Buying-Distributor-And-Scheme-Compare-Modal.png</small>
+            <p>Side-by-side comparison of suppliers for a medicine: scheme rules (free qty & % discount), list rate, net cost on bills, MRP, credit terms, min order, and payable vs effective cost.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/25-Buying-Order-Draft-And-Min-Order-Review-Modal.png" alt="Buying ? Distributor Draft Order & Minimum-Order Top-Up Review Modal" />
+        <div class="cap">
+          <span class="num">25</span>
+          <div class="captext">
+            <b>Buying ? Distributor Draft Order & Minimum-Order Top-Up Review Modal</b>
+            <small class="file">25-Buying-Order-Draft-And-Min-Order-Review-Modal.png</small>
+            <p>Review proposed distributor order, evaluate legitimate 30-day replenishment top-ups when below minimum order value, and send by Mail / Delivery guy / WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/26-Buying-Orders-Sent-Tab.png" alt="Buying ? 'Orders sent' Tab" />
+        <div class="cap">
+          <span class="num">26</span>
+          <div class="captext">
+            <b>Buying ? 'Orders sent' Tab</b>
+            <small class="file">26-Buying-Orders-Sent-Tab.png</small>
+            <p>Purchase orders already sent to distributors and awaiting delivery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="distributors">
+    <div class="sechead">
+      <h2>7. Distributors, Supplier Accounts, Credit Notes & Reconciliation (All Tabs)</h2>
+      <code>#/distributors ? 12 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/27-Distributors-Directory-All-Tab.png" alt="Distributors Directory ? 'All' Tab" />
+        <div class="cap">
+          <span class="num">27</span>
+          <div class="captext">
+            <b>Distributors Directory ? 'All' Tab</b>
+            <small class="file">27-Distributors-Directory-All-Tab.png</small>
+            <p>All suppliers with credit terms, minimum order value, last purchase bill, overdue/due-soon badges, pending credit claims, unpaid bills, and net payable total.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/28-Distributors-Directory-Due-In-7-Days-Tab.png" alt="Distributors Directory ? 'Due in 7 days / Overdue' Tab" />
+        <div class="cap">
+          <span class="num">28</span>
+          <div class="captext">
+            <b>Distributors Directory ? 'Due in 7 days / Overdue' Tab</b>
+            <small class="file">28-Distributors-Directory-Due-In-7-Days-Tab.png</small>
+            <p>Suppliers with bills approaching their credit due date or already overdue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/29-Distributors-Directory-Awaiting-Credit-Tab.png" alt="Distributors Directory ? 'Awaiting credit' Tab" />
+        <div class="cap">
+          <span class="num">29</span>
+          <div class="captext">
+            <b>Distributors Directory ? 'Awaiting credit' Tab</b>
+            <small class="file">29-Distributors-Directory-Awaiting-Credit-Tab.png</small>
+            <p>Suppliers with pending return or shortage credit claims awaiting adjustment.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/30-Distributors-Directory-Unpaid-Only-Tab.png" alt="Distributors Directory ? 'Unpaid only' Tab" />
+        <div class="cap">
+          <span class="num">30</span>
+          <div class="captext">
+            <b>Distributors Directory ? 'Unpaid only' Tab</b>
+            <small class="file">30-Distributors-Directory-Unpaid-Only-Tab.png</small>
+            <p>Suppliers with an active unpaid balance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/31-Distributors-Account-Overview-All-Bills.png" alt="Distributor Account ? Overview, Credit Notes & All Bills" />
+        <div class="cap">
+          <span class="num">31</span>
+          <div class="captext">
+            <b>Distributor Account ? Overview, Credit Notes & All Bills</b>
+            <small class="file">31-Distributors-Account-Overview-All-Bills.png</small>
+            <p>Individual supplier ledger showing gross, applied credit notes, claims awaiting credit (not deducted until confirmed & applied), net payable, and multi-bill payment allocation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/32-Distributors-Account-Reconcile-Statement.png" alt="Distributor Account ? Reconcile Supplier Statement Panel" />
+        <div class="cap">
+          <span class="num">32</span>
+          <div class="captext">
+            <b>Distributor Account ? Reconcile Supplier Statement Panel</b>
+            <small class="file">32-Distributors-Account-Reconcile-Statement.png</small>
+            <p>Compare a supplier's statement amount against recorded net payable and surface any variance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/33-Distributors-Account-Unpaid-Bills-Tab.png" alt="Distributor Account ? 'Unpaid' Bills Filter Tab" />
+        <div class="cap">
+          <span class="num">33</span>
+          <div class="captext">
+            <b>Distributor Account ? 'Unpaid' Bills Filter Tab</b>
+            <small class="file">33-Distributors-Account-Unpaid-Bills-Tab.png</small>
+            <p>Filtered list of unpaid accepted purchase bills ready for payment allocation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/34-Distributors-Account-Due-In-7-Days-Tab.png" alt="Distributor Account ? 'Due in 7 days' Bills Filter Tab" />
+        <div class="cap">
+          <span class="num">34</span>
+          <div class="captext">
+            <b>Distributor Account ? 'Due in 7 days' Bills Filter Tab</b>
+            <small class="file">34-Distributors-Account-Due-In-7-Days-Tab.png</small>
+            <p>Filtered list of unpaid bills due within 7 days or overdue.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/35-Distributors-Account-Overdue-Bills-Tab.png" alt="Distributor Account ? 'Overdue' Bills Filter Tab" />
+        <div class="cap">
+          <span class="num">35</span>
+          <div class="captext">
+            <b>Distributor Account ? 'Overdue' Bills Filter Tab</b>
+            <small class="file">35-Distributors-Account-Overdue-Bills-Tab.png</small>
+            <p>Filtered list of overdue unpaid bills calculated from bill date + credit terms.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/36-Distributors-Account-Paid-Bills-Tab.png" alt="Distributor Account ? 'Paid' Bills Filter Tab" />
+        <div class="cap">
+          <span class="num">36</span>
+          <div class="captext">
+            <b>Distributor Account ? 'Paid' Bills Filter Tab</b>
+            <small class="file">36-Distributors-Account-Paid-Bills-Tab.png</small>
+            <p>Settled bills showing payment method (Cheque / UPI / Cash), reference number, paid date, and Undo/reopen option for bounced cheques.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/37-Distributors-Account-Info-And-Terms-Modal.png" alt="Distributor Account ? 'Info & Terms' Modal" />
+        <div class="cap">
+          <span class="num">37</span>
+          <div class="captext">
+            <b>Distributor Account ? 'Info & Terms' Modal</b>
+            <small class="file">37-Distributors-Account-Info-And-Terms-Modal.png</small>
+            <p>Configure supplier credit terms, return recovery policy, minimum order value, phone numbers, email, PAN, GSTIN, and Drug Licence.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/38-Distributors-Purchase-Bill-Parsed-Copy-Drawer.png" alt="Distributor Account ? Purchase Bill Parsed Copy Drawer" />
+        <div class="cap">
+          <span class="num">38</span>
+          <div class="captext">
+            <b>Distributor Account ? Purchase Bill Parsed Copy Drawer</b>
+            <small class="file">38-Distributors-Purchase-Bill-Parsed-Copy-Drawer.png</small>
+            <p>Full line-by-line inspection of any historical purchase invoice directly from the supplier account.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="returns">
+    <div class="sechead">
+      <h2>8. Near-Expiry Stock & Supplier Returns (All 4 Tabs)</h2>
+      <code>#/returns ? 4 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/39-Returns-All-Batches-And-Claims-Tab.png" alt="Returns ? 'All' Tab (Grouped by Distributor + Return Claims)" />
+        <div class="cap">
+          <span class="num">39</span>
+          <div class="captext">
+            <b>Returns ? 'All' Tab (Grouped by Distributor + Return Claims)</b>
+            <small class="file">39-Returns-All-Batches-And-Claims-Tab.png</small>
+            <p>Near-expiry batches grouped by supplier with source bill link, purchase rate, acquisition value, estimated recovery, bulk 'Prepare all eligible returns', and Return Claims & Credit Notes lifecycle.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/40-Returns-Return-Now-Within-90d-Tab.png" alt="Returns ? 'Return now (?90d)' Tab" />
+        <div class="cap">
+          <span class="num">40</span>
+          <div class="captext">
+            <b>Returns ? 'Return now (?90d)' Tab</b>
+            <small class="file">40-Returns-Return-Now-Within-90d-Tab.png</small>
+            <p>Batches inside the 90-day return window eligible to be prepared and dispatched back to the distributor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/41-Returns-Expired-Dispose-Tab.png" alt="Returns ? 'Expired (dispose)' Tab" />
+        <div class="cap">
+          <span class="num">41</span>
+          <div class="captext">
+            <b>Returns ? 'Expired (dispose)' Tab</b>
+            <small class="file">41-Returns-Expired-Dispose-Tab.png</small>
+            <p>Expired lots that cannot return to saleable stock and must be lawfully disposed.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/42-Returns-Keep-Selling-Over-90d-Tab.png" alt="Returns ? 'Keep selling (>90d)' Tab" />
+        <div class="cap">
+          <span class="num">42</span>
+          <div class="captext">
+            <b>Returns ? 'Keep selling (>90d)' Tab</b>
+            <small class="file">42-Returns-Keep-Selling-Over-90d-Tab.png</small>
+            <p>Stock with more than 90 days of shelf life remaining.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="stock-trail">
+    <div class="sechead">
+      <h2>9. Stock Trail & Audit Evidence (All 7 Tabs + Drawer)</h2>
+      <code>#/trail ? 8 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/43-Stock-Trail-Batches-Tab.png" alt="Stock Trail ? 'Batches' Tab" />
+        <div class="cap">
+          <span class="num">43</span>
+          <div class="captext">
+            <b>Stock Trail ? 'Batches' Tab</b>
+            <small class="file">43-Stock-Trail-Batches-Tab.png</small>
+            <p>Every batch in stock showing received, sold, on-hand strips/loose units, weighted-average cost per pack, opening-stock badges, and shelf agreement status.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/44-Stock-Trail-Batch-Evidence-And-Count-Adjustment-Drawer.png" alt="Stock Trail ? Batch Provenance Drawer & Shelf Count / Location Controls" />
+        <div class="cap">
+          <span class="num">44</span>
+          <div class="captext">
+            <b>Stock Trail ? Batch Provenance Drawer & Shelf Count / Location Controls</b>
+            <small class="file">44-Stock-Trail-Batch-Evidence-And-Count-Adjustment-Drawer.png</small>
+            <p>Full batch history (Bought on bills, Sold on bills, Adjusted/withdrawn) plus inline 'Record count / damage' and 'Set shelf' actions.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/45-Stock-Trail-Distributor-Offers-Tab.png" alt="Stock Trail ? 'Distributor offers' Tab" />
+        <div class="cap">
+          <span class="num">45</span>
+          <div class="captext">
+            <b>Stock Trail ? 'Distributor offers' Tab</b>
+            <small class="file">45-Stock-Trail-Distributor-Offers-Tab.png</small>
+            <p>Historical rates, free packs, net cost per pack, and discount % charged by each distributor across bills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/46-Stock-Trail-New-Names-On-Bills-Tab.png" alt="Stock Trail ? 'New names on bills' Tab" />
+        <div class="cap">
+          <span class="num">46</span>
+          <div class="captext">
+            <b>Stock Trail ? 'New names on bills' Tab</b>
+            <small class="file">46-Stock-Trail-New-Names-On-Bills-Tab.png</small>
+            <p>Unmatched medicine names seen on imported bills, ready to link to an existing medicine or catalogue as new.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/47-Stock-Trail-Sold-Before-Checking-Tab.png" alt="Stock Trail ? 'Sold before checking' Tab" />
+        <div class="cap">
+          <span class="num">47</span>
+          <div class="captext">
+            <b>Stock Trail ? 'Sold before checking' Tab</b>
+            <small class="file">47-Stock-Trail-Sold-Before-Checking-Tab.png</small>
+            <p>Provisional lots sold at the counter before their purchase bill finished physical verification, plus sales-at-risk alerts.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/48-Stock-Trail-Customer-Brings-Back-Tab.png" alt="Stock Trail ? 'Customer brings back' Tab" />
+        <div class="cap">
+          <span class="num">48</span>
+          <div class="captext">
+            <b>Stock Trail ? 'Customer brings back' Tab</b>
+            <small class="file">48-Stock-Trail-Customer-Brings-Back-Tab.png</small>
+            <p>Look up a customer's bill number to verify batch provenance, past purchases, and attached prescriptions before accepting a customer return.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/49-Stock-Trail-Prescriptions-Tab.png" alt="Stock Trail ? 'Prescriptions' Tab" />
+        <div class="cap">
+          <span class="num">49</span>
+          <div class="captext">
+            <b>Stock Trail ? 'Prescriptions' Tab</b>
+            <small class="file">49-Stock-Trail-Prescriptions-Tab.png</small>
+            <p>Recorded patient prescriptions and how many strips/tablets have been dispensed against each.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/50-Stock-Trail-Voice-Accuracy-Tab.png" alt="Stock Trail ? 'Voice accuracy' Tab" />
+        <div class="cap">
+          <span class="num">50</span>
+          <div class="captext">
+            <b>Stock Trail ? 'Voice accuracy' Tab</b>
+            <small class="file">50-Stock-Trail-Voice-Accuracy-Tab.png</small>
+            <p>Per-language voice recognition metrics (accepted, corrected, not found, median time to add, and most-often-corrected phrases).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compliance">
+    <div class="sechead">
+      <h2>10. Compliance, Batch Recalls & Inspector Produce (Overview + 5 Artifacts)</h2>
+      <code>#/compliance ? 6 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/51-Compliance-Recalls-And-Inspector-Overview.png" alt="Compliance ? Batch Recalls & Drug Licence Overview" />
+        <div class="cap">
+          <span class="num">51</span>
+          <div class="captext">
+            <b>Compliance ? Batch Recalls & Drug Licence Overview</b>
+            <small class="file">51-Compliance-Recalls-And-Inspector-Overview.png</small>
+            <p>Issue batch-scoped recalls, compute buyer exposure, notify opted-in customers, withdraw stock, and produce read-only statutory records.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/52-Compliance-Inspector-Produce-Register.png" alt="Compliance ? Inspector Produce: 'register' Tab" />
+        <div class="cap">
+          <span class="num">52</span>
+          <div class="captext">
+            <b>Compliance ? Inspector Produce: 'register' Tab</b>
+            <small class="file">52-Compliance-Inspector-Produce-Register.png</small>
+            <p>Read-only statutory Scheduled-Drugs (H1) Register artifact.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/53-Compliance-Inspector-Produce-ColdChain.png" alt="Compliance ? Inspector Produce: 'coldChain' Tab" />
+        <div class="cap">
+          <span class="num">53</span>
+          <div class="captext">
+            <b>Compliance ? Inspector Produce: 'coldChain' Tab</b>
+            <small class="file">53-Compliance-Inspector-Produce-ColdChain.png</small>
+            <p>Read-only Cold-Chain temperature log and excursion artifact.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/54-Compliance-Inspector-Produce-Licence.png" alt="Compliance ? Inspector Produce: 'licence' Tab" />
+        <div class="cap">
+          <span class="num">54</span>
+          <div class="captext">
+            <b>Compliance ? Inspector Produce: 'licence' Tab</b>
+            <small class="file">54-Compliance-Inspector-Produce-Licence.png</small>
+            <p>Read-only Pharmacy Drug Licence status artifact.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/55-Compliance-Inspector-Produce-Recalls.png" alt="Compliance ? Inspector Produce: 'recalls' Tab" />
+        <div class="cap">
+          <span class="num">55</span>
+          <div class="captext">
+            <b>Compliance ? Inspector Produce: 'recalls' Tab</b>
+            <small class="file">55-Compliance-Inspector-Produce-Recalls.png</small>
+            <p>Read-only Batch Recalls and customer outreach artifact.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/56-Compliance-Inspector-Produce-RetainedRx.png" alt="Compliance ? Inspector Produce: 'retainedRx' Tab" />
+        <div class="cap">
+          <span class="num">56</span>
+          <div class="captext">
+            <b>Compliance ? Inspector Produce: 'retainedRx' Tab</b>
+            <small class="file">56-Compliance-Inspector-Produce-RetainedRx.png</small>
+            <p>Read-only Retained Prescriptions ledger artifact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="customers">
+    <div class="sechead">
+      <h2>11. Customers & Repeat-Order Previews (All 4 Tabs + Drawer)</h2>
+      <code>#/customers ? 5 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/57-Customers-Directory-All-Tab.png" alt="Customers ? 'All' Tab" />
+        <div class="cap">
+          <span class="num">57</span>
+          <div class="captext">
+            <b>Customers ? 'All' Tab</b>
+            <small class="file">57-Customers-Directory-All-Tab.png</small>
+            <p>Customer directory showing contact info, repeat refill review dates, open requests, outstanding Udhaar, and linked doctor.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/58-Customers-Repeat-Expected-In-7d-Tab.png" alt="Customers ? 'Repeat expected in 7d' Tab" />
+        <div class="cap">
+          <span class="num">58</span>
+          <div class="captext">
+            <b>Customers ? 'Repeat expected in 7d' Tab</b>
+            <small class="file">58-Customers-Repeat-Expected-In-7d-Tab.png</small>
+            <p>Customers whose estimated medicine supply is due for a refill review within the next 7 days.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/59-Customers-Open-Requests-Tab.png" alt="Customers ? 'Open requests' Tab" />
+        <div class="cap">
+          <span class="num">59</span>
+          <div class="captext">
+            <b>Customers ? 'Open requests' Tab</b>
+            <small class="file">59-Customers-Open-Requests-Tab.png</small>
+            <p>Customers who currently have pending or arrived medicine requests.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/60-Customers-Has-Udhaar-Tab.png" alt="Customers ? 'Has Udhaar' Tab" />
+        <div class="cap">
+          <span class="num">60</span>
+          <div class="captext">
+            <b>Customers ? 'Has Udhaar' Tab</b>
+            <small class="file">60-Customers-Has-Udhaar-Tab.png</small>
+            <p>Customers with an outstanding credit balance.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/61-Customers-Previous-Order-And-Repeat-Review-Drawer.png" alt="Customers ? Previous Order & Repeat Review Drawer" />
+        <div class="cap">
+          <span class="num">61</span>
+          <div class="captext">
+            <b>Customers ? Previous Order & Repeat Review Drawer</b>
+            <small class="file">61-Customers-Previous-Order-And-Repeat-Review-Drawer.png</small>
+            <p>Reviewable reference from the customer's previous bill showing usable stock, incoming POs, open requests, and one-click 'Prepare Counter Sale draft' or 'Add as Customer Request' (never auto-orders).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="doctors">
+    <div class="sechead">
+      <h2>12. Doctors Directory</h2>
+      <code>#/doctors ? 1 capture</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/62-Doctors-Directory.png" alt="Doctors ? Prescriber Master Directory" />
+        <div class="cap">
+          <span class="num">62</span>
+          <div class="captext">
+            <b>Doctors ? Prescriber Master Directory</b>
+            <small class="file">62-Doctors-Directory.png</small>
+            <p>Add and view prescribing doctors (name, speciality, phone, registration number, clinic address).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="udhaar">
+    <div class="sechead">
+      <h2>13. Udhaar (Customer Credit & Private Reminders)</h2>
+      <code>#/udhar ? 1 capture</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/63-Udhaar-Receivables-And-WhatsApp-Outbox.png" alt="Udhaar ? Ageing Buckets (0?30, 31?60, 60+), Repayments & WhatsApp Outbox" />
+        <div class="cap">
+          <span class="num">63</span>
+          <div class="captext">
+            <b>Udhaar ? Ageing Buckets (0?30, 31?60, 60+), Repayments & WhatsApp Outbox</b>
+            <small class="file">63-Udhaar-Receivables-And-WhatsApp-Outbox.png</small>
+            <p>Track customer credit balances by age, send private opt-in reminders, forgive bad debt with dignity, record repayments, and inspect the offline WhatsApp outbox.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="deliveries">
+    <div class="sechead">
+      <h2>14. Home Deliveries</h2>
+      <code>#/delivery ? 1 capture</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/64-Deliveries-Schedule-And-Handover.png" alt="Deliveries ? Schedule, Dispatch, Proxy Handover & Settle" />
+        <div class="cap">
+          <span class="num">64</span>
+          <div class="captext">
+            <b>Deliveries ? Schedule, Dispatch, Proxy Handover & Settle</b>
+            <small class="file">64-Deliveries-Schedule-And-Handover.png</small>
+            <p>Manage home deliveries with promised time windows, distinct proxy receiver capture, and Cash / UPI / Udhaar settlement.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reports">
+    <div class="sechead">
+      <h2>15. Reports, GST & CA Export (All 8 Tabs)</h2>
+      <code>#/reports ? 8 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/65-Reports-Day-Book-Tab.png" alt="Reports ? 'Day-book' Tab" />
+        <div class="cap">
+          <span class="num">65</span>
+          <div class="captext">
+            <b>Reports ? 'Day-book' Tab</b>
+            <small class="file">65-Reports-Day-Book-Tab.png</small>
+            <p>Daily sales takings reconstructed from the event log, reconciled across Paid and Udhaar bills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/66-Reports-Receivables-Tab.png" alt="Reports ? 'Receivables' Tab" />
+        <div class="cap">
+          <span class="num">66</span>
+          <div class="captext">
+            <b>Reports ? 'Receivables' Tab</b>
+            <small class="file">66-Reports-Receivables-Tab.png</small>
+            <p>Customer Udhaar ageing summary and per-account breakdown (0?30, 31?60, 60+ days).</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/67-Reports-Payables-Tab.png" alt="Reports ? 'Payables' Tab" />
+        <div class="cap">
+          <span class="num">67</span>
+          <div class="captext">
+            <b>Reports ? 'Payables' Tab</b>
+            <small class="file">67-Reports-Payables-Tab.png</small>
+            <p>Distributor gross, applied credit notes, true-net, and net due balances.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/68-Reports-Expiry-Tab.png" alt="Reports ? 'Expiry' Tab" />
+        <div class="cap">
+          <span class="num">68</span>
+          <div class="captext">
+            <b>Reports ? 'Expiry' Tab</b>
+            <small class="file">68-Reports-Expiry-Tab.png</small>
+            <p>Units at risk across saleable, short-dated, and expired batches.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/69-Reports-GST-Tax-Records-And-CA-Export-Tab.png" alt="Reports ? 'GST turnover' (GST, Tax Records & CA Export) Tab" />
+        <div class="cap">
+          <span class="num">69</span>
+          <div class="captext">
+            <b>Reports ? 'GST turnover' (GST, Tax Records & CA Export) Tab</b>
+            <small class="file">69-Reports-GST-Tax-Records-And-CA-Export-Tab.png</small>
+            <p>Period-filtered CA report with CSV download, pre-export exception checks (unverified bills, missing GSTINs, unrecorded GST rates, pending notes), sales invoices, purchase invoices, and return adjustments.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/70-Reports-Scheduled-Drugs-Register-Tab.png" alt="Reports ? 'Register' Tab" />
+        <div class="cap">
+          <span class="num">70</span>
+          <div class="captext">
+            <b>Reports ? 'Register' Tab</b>
+            <small class="file">70-Reports-Scheduled-Drugs-Register-Tab.png</small>
+            <p>Statutory Scheduled-Drugs (H1) Register entries with patient, drug, quantity, prescriber, and closed status.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/71-Reports-Scheme-Economics-Tab.png" alt="Reports ? 'Schemes' Tab" />
+        <div class="cap">
+          <span class="num">71</span>
+          <div class="captext">
+            <b>Reports ? 'Schemes' Tab</b>
+            <small class="file">71-Reports-Scheme-Economics-Tab.png</small>
+            <p>Evaluated distributor schemes showing offer terms, effective cost, expiry risk, and accept/decline recommendation.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/72-Reports-Refill-Adherence-Tab.png" alt="Reports ? 'Adherence' Tab" />
+        <div class="cap">
+          <span class="num">72</span>
+          <div class="captext">
+            <b>Reports ? 'Adherence' Tab</b>
+            <small class="file">72-Reports-Refill-Adherence-Tab.png</small>
+            <p>Customer visit regularity and last purchase dates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="settings">
+    <div class="sechead">
+      <h2>16. Settings (All 3 Tabs: Pharmacy, Bill Printing, Phones)</h2>
+      <code>#/settings ? 4 captures</code>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/73-Settings-Pharmacy-Tab.png" alt="Settings ? 'Pharmacy' Tab" />
+        <div class="cap">
+          <span class="num">73</span>
+          <div class="captext">
+            <b>Settings ? 'Pharmacy' Tab</b>
+            <small class="file">73-Settings-Pharmacy-Tab.png</small>
+            <p>Configure pharmacy name, address, phone, email, drug licence number, GSTIN, and shop logo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/74-Settings-Bill-Printing-Preprinted-Tab.png" alt="Settings ? 'Bill Printing' Tab (Pre-Printed Stationery Mode)" />
+        <div class="cap">
+          <span class="num">74</span>
+          <div class="captext">
+            <b>Settings ? 'Bill Printing' Tab (Pre-Printed Stationery Mode)</b>
+            <small class="file">74-Settings-Bill-Printing-Preprinted-Tab.png</small>
+            <p>Visual drag-and-drop layout editor for pre-printed stationery with millimetre positioning and field toggles.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/75-Settings-Bill-Printing-Plain-Paper-Tab.png" alt="Settings ? 'Bill Printing' Tab (Plain Paper Mode)" />
+        <div class="cap">
+          <span class="num">75</span>
+          <div class="captext">
+            <b>Settings ? 'Bill Printing' Tab (Plain Paper Mode)</b>
+            <small class="file">75-Settings-Bill-Printing-Plain-Paper-Tab.png</small>
+            <p>Visual layout editor for full Plain Paper bills including pharmacy header, licence, and GST details.</p>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img class="shot" loading="lazy" src="screenshots/76-Settings-Phones-Tab.png" alt="Settings ? 'Phones' Tab" />
+        <div class="cap">
+          <span class="num">76</span>
+          <div class="captext">
+            <b>Settings ? 'Phones' Tab</b>
+            <small class="file">76-Settings-Phones-Tab.png</small>
+            <p>Enable network access for paired shop phones (used as counter microphone or strip scanner), generate one-time pairing codes, and revoke lost devices.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<div class="lb" id="lb"><img id="lbimg" alt="" /></div>
+<script>
+  const lb = document.getElementById("lb"), lbimg = document.getElementById("lbimg");
+  document.addEventListener("click", (e) => {
+    const img = e.target.closest(".shot");
+    if (img) { lbimg.src = img.src; lb.classList.add("on"); return; }
+    if (e.target === lb || e.target === lbimg) lb.classList.remove("on");
+  });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") lb.classList.remove("on"); });
+</script>
+</body>
+</html>
